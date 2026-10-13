@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Clonetube.com</title>
+    <link rel='stylesheet' href='clonetube.css'>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <button id="menu-btn">☰</button>
+            <h2>Clonetube</h2>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+        <div class="header-right">
+            <button>Upload</button>
+            <button>Sign In</button>
+        </div>
+        <div class="profile"></div>
+    </header>
+
+    <aside id="sidebar" class="sidebar">
+    <a href="#">🏠 Home</a>
+    <a href="#">🎬 Shorts</a>
+    <a href="#">📺 Subscriptions</a>
+    <hr>
+
+    <h4>You</h4>
+
+    <a href="#">🕘 History</a>
+    <a href="#">▶ Your videos</a>
+    <a href="#">🕘 Watch later</a>
+    <a href="#">👍 Liked videos</a>
+    <hr>
+
+    <h4>Explore</h4>
+
+    <a href="#">🔥 Trending</a>
+    <a href="#">🎵 Music</a>
+    <a href="#">🎬 Movies & TV</a>
+    <a href="#">🔴 Live</a>
+    <a href="#">🎮 Gaming</a>
+    <a href="#">📰 News</a>
+    <a href="#">🏆 Sports</a>
+    </aside>
+
+    <main>
+ <div class="category">
+     <button>All</button>
+    <button>Music</button>
+    <button>Gaming</button>
+    <button>Live</button>
+    <button>Mixes</button>
+    <button>Comedy</button>
+    <button>Action</button>
+    <button>Recently uploaded</button>
+ </div>
+
+ <section>
+    <h2>Recommended</h2>
+    <div class="video-grid">
+        <div class="video-card" onclick="openVideo('gta6')">
+            <img class="thumbnail"
+         src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+         alt="Coding on a laptop">
+
+         <div class="video-info">
+        <img class="channel-avatar"
+             src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
+             alt="RockStar">
+
+        <div class="video-details">
+            <h3>GTA 6</h3>
+            <p>RockStar</p>
+            <p>543K views • 3 days ago</p>
+        </div>
+
+    </div>
+
+        </div>
+
+    <div class="video-card" onclick="openVideo('gta6')">
+
+    <img class="thumbnail"
+         src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
+         alt="Bugatti delivery in Lagos">
+
+    <div class="video-info">
+
+        <img class="channel-avatar"
+             src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
+             alt="Abuja Car">
+
+        <div class="video-details">
+            <h3>Bugatti delivery in Lagos</h3>
+            <p>Abuja Car</p>
+            <p>1.5m views • 7 days ago</p>
+        </div>
+    </div>
+</div>
+
+ <div class="video-card" onclick="openVideo('gta6')">
+    <img class="thumbnail"
+         src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
+         alt="Bugatti delivery in Lagos">
+
+    <div class="video-info">
+        <img class="channel-avatar"
+             src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
+             alt="Abuja Car">
+
+        <div class="video-details">
+            <h3>Bugatti delivery in Lagos</h3>
+            <p>Abuja Car</p>
+            <p>1.5m views • 7 days ago</p>
+        </div>
+    </div>
+</div>
+
+    </div>
+</section>
+    </main>
+
+     <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const sidebar = document.getElementById("sidebar");
+
+    menuBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+    });
+
+    function openVideo(video) {
+        if (video === "gta6") {
+            window.location.href = "video.html?video=gta6";
+        }
+
+        if (video === "bugatti") {
+            window.location.href = "video.html?video=bugatti";
+        }
+    }
+</script>
+    
+</body>
+</html>

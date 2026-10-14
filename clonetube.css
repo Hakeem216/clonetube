@@ -155,3 +155,238 @@ main {
     color: #606060;
     font-size: 14px;
 }
+
+/* ===== GTA VI SHOWCASE ===== */
+
+.gta-showcase {
+  color: #fff;
+  max-width: 1500px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.gta-hero {
+  min-height: 390px;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(
+    115deg,
+    #170c29,
+    #57204f,
+    #25102f
+  );
+}
+
+.gta-hero::after {
+  content: "VI";
+  position: absolute;
+  right: 25px;
+  bottom: -90px;
+  font-size: clamp(200px, 32vw, 420px);
+  font-weight: 900;
+  font-style: italic;
+  color: rgba(255, 180, 110, 0.14);
+  pointer-events: none;
+}
+
+.gta-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+}
+
+.gta-label {
+  color: #ff91c6;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.gta-hero h1 {
+  font-size: clamp(38px, 6vw, 76px);
+  line-height: 0.95;
+  margin: 20px 0;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.gta-hero p {
+  color: #e2d9e9;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.gta-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 24px;
+  background: #ff79b5;
+  color: #1b0c23;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.gta-button:hover {
+  background: #ffa2cf;
+  transform: translateY(-2px);
+}
+
+.gta-details {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+  gap: 28px;
+  margin-top: 30px;
+}
+
+.gta-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.gta-heading h2 {
+  margin: 0 0 8px;
+  font-size: 25px;
+}
+
+.gta-heading p,
+.gta-video-card p {
+  color: #aaa;
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+.gta-tag {
+  border: 1px solid #ff79b5;
+  color: #ff9bc9;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.gta-trailer {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gta-trailer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.gta-description {
+  margin-top: 25px;
+  padding: 22px;
+  background: #1c1c1c;
+  border-radius: 10px;
+}
+
+.gta-description h3,
+.gta-sidebar h3 {
+  margin-top: 0;
+}
+
+.gta-description p {
+  color: #c5c5c5;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.gta-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.gta-facts div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gta-facts span {
+  color: #ff9bc9;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.gta-facts strong {
+  font-size: 13px;
+}
+
+.gta-sidebar h3 {
+  margin-bottom: 18px;
+}
+
+.gta-video-card {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: white;
+  text-decoration: none;
+}
+
+.gta-video-card img {
+  width: 45%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.gta-video-card div {
+  min-width: 0;
+}
+
+.gta-video-card strong {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.gta-video-card:hover strong {
+  color: #ff9bc9;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 800px) {
+  .gta-details {
+    grid-template-columns: 1fr;
+  }
+
+  .gta-hero {
+    min-height: 320px;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gta-hero {
+    min-height: 290px;
+    padding: 20px;
+  }
+
+  .gta-heading h2 {
+    font-size: 19px;
+  }
+
+  .gta-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .gta-description {
+    padding: 16px;
+  }
+}
